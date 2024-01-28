@@ -94,7 +94,22 @@ sums = function(x){
 sums(A)
 
 
+#  incourse -------------
+x = rpois(10, 7.6)
+x
+A.sort = function(x){
+  sort(x)
+}
+A.sort(x)
 
+own.med = function(x){
+  median(A.sort(x))
+}
+own.med(x)
+
+y = rexp(100, .05)
+y
+own.med(y)
 
 
 
