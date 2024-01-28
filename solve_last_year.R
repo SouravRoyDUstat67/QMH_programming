@@ -24,7 +24,11 @@ return(x[row, col])
 
 sub(A)
 
-# Problem-02 ----------------------------------------
+#----------------- Problem-02 -----------------------
+curve(dnorm(x), -4, 4)
+rect(-1, 0, 1, dnorm(1), col = "grey")
+
+# Problem-03 ----------------------------------------
 
 x = 1:10; y = 11:20
 
@@ -42,6 +46,20 @@ return(median(X * Y))
 }
 
 MP(x, y)
+
+
+#################### 2019 #########################
+#-------------------- problem-01 ------------------
+A = matrix(1:9, 3, 3, T)
+
+range = function(x){
+  range = c()
+  for(i in 1:nrow(x)){
+  range[i] = (max(x[i, ]) - min(x[i, ]))
+  }
+  return(range)
+}
+range(A)
 
 
 #------------------- Simulation -------------------
@@ -65,4 +83,21 @@ for(x in 1:1000){
 
 v
 hist(v)
+
+
+#---------------- problem-03 ----------------------
+A = matrix(1:9, 3, 3, T)
+
+sums = function(x){
+  rowSums(x^3)
+}
+sums(A)
+
+
+
+
+
+
+
+
 
