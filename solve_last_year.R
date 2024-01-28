@@ -44,4 +44,25 @@ return(median(X * Y))
 MP(x, y)
 
 
+#------------------- Simulation -------------------
+v = c()
+for(x in 1:1000){
+  u = c()
+  u = runif(1, 0, 1)
+  i = 1
+  while(u >= exp(-1)){
+    
+    u = cumprod(u)
+    
+    u = runif(1, 0, 1)
+    i = i + 1
+  }
+  y = i - 1
+  
+  v[x] = y
+  
+}
+
+v
+hist(v)
 
