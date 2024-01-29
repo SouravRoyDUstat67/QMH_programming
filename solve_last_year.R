@@ -113,8 +113,24 @@ own.med(y)
 
 
 #---------------------Final 2022-------------------------
+# problem-05 ---------------------------------------
 
-#  problem-06
+N = function(n, lambda){
+  x = rpois(n, lambda)
+  y = sqrt(n) * (mean(x) - lambda)
+  
+  return(y)
+}
+N(101001000, 1.5)
+
+v = c()
+for (i in 1:20) {
+  v[i] = N(101001000, 1.5)
+}
+v
+mean(v); var(v)
+
+#  problem-06 ------------------------------------
 
 x = rbinom(35, 100, 0.05)
 
