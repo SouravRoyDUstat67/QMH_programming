@@ -112,7 +112,38 @@ y
 own.med(y)
 
 
+#---------------------Final 2022-------------------------
 
+#  problem-06
 
+x = rbinom(35, 100, 0.05)
 
+A = matrix(x, 7, 5, T)
+A
+
+fx = function(x){
+  
+  count = c()
+  
+  for(i in 1:ncol(x)){
+    count[i] = sum(x[, i] > 5)
+  }
+  return(count)
+}
+
+fx(A)
+
+chickwts
+
+med = function(x){
+  
+  n = length(x)
+  y = sort(x)
+  
+  median = if(n %% 2 == 0) {(y[n/2]+y[n/2 + 1])/2} else{y[(n+1)/2]}
+  
+  return(median = median)
+}
+med(chickwts$weight)
+median(chickwts$weight)
 
